@@ -168,10 +168,9 @@ class XWingCardViewer(QtWidgets.QMainWindow):
         crew_view.setModel(crew_sort)
 
     def populateViews(self):
-        # os.system("cls")
-        
         for card_type in self.card_types:
             getattr(self, 'populate%s' % card_type)()
+        print('')
 
     def populatePilots(self):
         self.ui.pilotView.clearSpans()

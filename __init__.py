@@ -129,7 +129,7 @@ def search_for_value(d_dict, card_type, search_terms, slot=None):
     return_list = []
 
     if search_terms == '':
-        print("\tNo search terms")
+        # print("\tNo search terms")
         for d in d_dict:
             c = check_for_value(d, None, slot) 
             if c['retval']:
@@ -137,7 +137,7 @@ def search_for_value(d_dict, card_type, search_terms, slot=None):
                 return_list.append({'dict': card_type, 'id': c['id']})
         return return_list
 
-    print("\tSearch terms: %s" % search_terms)
+    # print("\tSearch terms: %s" % search_terms)
 
     search_term_list = search_terms.split()
 
@@ -152,10 +152,10 @@ def search_for_value(d_dict, card_type, search_terms, slot=None):
                 # return_list.append({'dict': card_type, 'id': c['id']})
                 search_set.add('%s%s' % ('p' if card_type == 'Pilot' else 'u', c['id']))
 
-        print('Results for %s:\n\t%s' % (search_term, '\n\t'.join(sorted(list(search_set)))))
+        # print('Results for %s:\n\t%s' % (search_term, '\n\t'.join(sorted(list(search_set)))))
         search_sets.append(search_set)
 
-    print(search_sets)
+    # print(search_sets)
     if len(search_sets) == 1:
         for i in search_sets[0]:
             return_list.append({'dict': card_type, 'id': int(i[1:])})
@@ -165,7 +165,7 @@ def search_for_value(d_dict, card_type, search_terms, slot=None):
 
     # for q in return_list:
         # print(q)
-    print("Return list: %s" % str(return_list))
+    # print("Return list: %s" % str(return_list))
     return return_list
 
 
