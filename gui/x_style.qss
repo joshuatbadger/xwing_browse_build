@@ -1,0 +1,29 @@
+QWidget {
+   background-color: #222222;
+   color: #dddddd
+}
+
+QLabel {
+   background-color: #222222;
+   color: #618b38;
+}
+
+QPushButton {
+   #background-color: #444444;
+   #color: #ffffff;
+   border-radius: 5px;
+   border-style: none;
+   height: 25px;
+}
+
+QTableView {
+   #background-color: #333333;
+   alternate-background-color: #444444;
+   color: #dddddd;
+   selection-background-color: yellow;
+   #show-decoration-selected: 1;
+}
+
+QTableView::QHeaderView {
+   background-color: #444444;
+}
